@@ -1,0 +1,6 @@
+Config(
+    prefix: ":cc",
+    map: {
+        "blub": "obsidian",
+    }
+)
