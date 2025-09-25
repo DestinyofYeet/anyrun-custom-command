@@ -18,6 +18,7 @@ Config(
       description: "Launch something else",
       exec: "blub rofl",
       // shows the output of the process (when anyrun is launched on the command line)
+      // also sometimes needed for scripts which pipe outputs
       print_output: Some(true),
     ),
   }
