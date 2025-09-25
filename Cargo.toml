@@ -1,5 +1,5 @@
 [package]
-name = "anyrun-custom-command"
+name = "custom-command"
 version = "0.1.0"
 edition = "2024"
 
