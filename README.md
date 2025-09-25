@@ -2,6 +2,7 @@ This is a [anyrun](https://github.com/anyrun-org/anyrun) plugin which allows you
 
 Config example:
 ```ron
+// custom-commands.ron
 Config(
   prefix: ":cc",
   map: {
@@ -21,6 +22,15 @@ Config(
     ),
   }
 )
+```
+
+Default Config:
+```ron
+Config(
+  prefix: ":cc",
+  map: {}
+)
+  
 ```
 
 # Include with homeManager
