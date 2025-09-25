@@ -1,4 +1,4 @@
-This is a anyrun plugin which allows you to run custom commands.
+This is a [anyrun](https://github.com/anyrun-org/anyrun) plugin which allows you to run custom commands.
 
 Config example:
 ```ron
