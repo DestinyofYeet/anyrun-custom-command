@@ -5,8 +5,9 @@ Config example:
 // custom-commands.ron
 Config(
   prefix: ":cc",
-  map: {
-    "obsidian": Entry(
+  commands: {
+    Entry(
+      title: "Obsidian",
       description: "Launch obsidian",
       exec: "obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3",
       envs: Some([
@@ -14,13 +15,38 @@ Config(
       ]),
     ),
 
-    "something-else": Entry(
+    Entry(
+      title: "Something else"
       description: "Launch something else",
       exec: "blub rofl",
       // shows the output of the process (when anyrun is launched on the command line)
       // also sometimes needed for scripts which pipe outputs
       print_output: Some(true),
     ),
+
+    Entry(
+      title: "Something nested",
+      description: "Something nested",
+      subcommands: [
+        Entry(
+          title: "Nested level 1",
+          description: "nested on the first level"
+          subcommands: [
+            Entry(
+              title: "Nested level 2",
+              description: "nested on the second level",
+              exec: "nested"
+            )
+          ]
+        ),
+
+        Entry(
+          title: "Also nested on level 1",
+          description: "also nested on the first level"
+          exec: "also nested"
+        )
+      ]
+    )
   }
 )
 ```
@@ -29,7 +55,7 @@ Default Config:
 ```ron
 Config(
   prefix: ":cc",
-  map: {}
+  commands: []
 )
   
 ```
